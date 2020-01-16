@@ -11,14 +11,14 @@ pipeline {
       stage ('Testing Stage'){
           steps {
               withMaven(maven: 'Maven_3_6_3') {
-      sh 'mvn Test'
+      sh 'mvn test'
           }
        }
     } 
     stage ('Deployment Stage'){
       steps {
         withMaven(maven: 'Maven_3_6_3') {
-            sh 'mvn Deploy'
+            sh 'mvn deploy'
               }
            }
         } 
